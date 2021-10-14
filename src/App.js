@@ -8,6 +8,7 @@ import {
 
 import QuizList from './QuizList';
 import Home from './Home';
+import Quiz from './Quiz';
 
 function App() {
   return (
@@ -32,6 +33,11 @@ function App() {
             <Route path="/quizes">
               <QuizList />
             </Route>
+            <Route exact path="/quiz/:id" render={(props) => {
+              return(<Quiz id={props.match.params.id} />)
+            }} >
+            </Route>
+            
             <Route path="/">
               <Home />
             </Route>
