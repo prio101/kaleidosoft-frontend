@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col w-full min-h-screen">
+      <nav className="m-20 p-10 bg-gray-800 rounded-full">
+        <span className="font-bold text-white text-2xl">Kaleido Soft Quiz Game.</span>
+        <a class="cursor-pointer mx-10 text-white font-bold">Quiz</a>
+        <a class="cursor-pointer mx-10 text-white font-bold">Add new Quiz</a>
+      </nav>     
     </div>
   );
 }
