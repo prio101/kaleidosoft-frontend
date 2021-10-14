@@ -1,13 +1,42 @@
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import QuizList from './QuizList';
+import Home from './Home';
 
 function App() {
   return (
     <div className="flex flex-col w-full min-h-screen">
-      <nav className="m-20 p-10 bg-gray-800 rounded-full">
-        <span className="font-bold text-white text-2xl">Kaleido Soft Quiz Game.</span>
-        <a class="cursor-pointer mx-10 text-white font-bold">Quiz</a>
-        <a class="cursor-pointer mx-10 text-white font-bold">Add new Quiz</a>
-      </nav>     
+      <Router>
+          <nav className="flex flex-row p-10 bg-gray-800 rounded-md text-white font-bold">
+            <ul className="flex flex-row">
+              <li className="text-2xl font-bold">KaleidoSoft Frontend</li>
+              <li className="m-4">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="m-4">
+                <Link to="/quizes">Quiz Lists</Link>
+              </li>
+              
+            </ul>
+          </nav>
+
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/quizes">
+              <QuizList />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+      </Router>
     </div>
   );
 }
