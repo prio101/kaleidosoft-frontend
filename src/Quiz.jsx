@@ -20,7 +20,7 @@ class Quiz extends React.Component {
 
   componentDidMount(){
     let url = base_url + api + this.state.id;
-    fetch('http://localhost:3000/api/v1/quizes/'+this.state.id,
+    fetch('https://kaelido-backend.herokuapp.com/quizes/'+this.state.id,
       {
         method: 'GET',
         mode: 'cors',       
@@ -46,7 +46,7 @@ class Quiz extends React.Component {
       feedback: 'Lorem Ipsum',
       quiz_id: this.state.quiz.id
     }
-    fetch('http://localhost:3000/api/v1/results', 
+    fetch('https://kaelido-backend.herokuapp.com/results', 
     {
       method: 'POST',
       mode: 'cors',       

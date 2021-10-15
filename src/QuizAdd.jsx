@@ -24,7 +24,7 @@ class QuizAdd extends React.Component {
                     difficulty: this.state.difficulty   
                   }
                 }
-    fetch('http://localhost:3000/api/v1/quizes', 
+    fetch('https://kaelido-backend.herokuapp.com/api/v1/quizes', 
       {
         method: 'POST',
         mode: 'cors',       

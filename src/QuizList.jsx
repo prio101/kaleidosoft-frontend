@@ -14,7 +14,7 @@ class QuizList extends React.Component {
 
   componentDidMount(){
     let url = base_url + api + this.state.id
-    fetch('http://localhost:3000/api/v1/quizes',
+    fetch('https://kaelido-backend.herokuapp.com/quizes',
       {
         method: 'GET',
         mode: 'cors',       
