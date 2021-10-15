@@ -41,10 +41,12 @@ class Quiz extends React.Component {
     // didn't have time to work with user auth and Feedback system
     
     let data = {
-      user_id: 1,
-      result: total,
-      feedback: 'Lorem Ipsum',
-      quiz_id: this.state.quiz.id
+       result: {
+          user_id: 1,
+          result: total,
+          feedback: 'Lorem Ipsum',
+          quiz_id: this.state.quiz.id
+       }
     }
     fetch('https://kaelido-backend.herokuapp.com/api/v1/results', 
     {
