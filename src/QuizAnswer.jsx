@@ -9,7 +9,8 @@ class QuizAnswer extends React.Component {
     this.state = {
       question: this.props.question,
       label: this.props.question.label,
-      answer: ''
+      answer: '',
+      correct_answer: this.props.question.correct_answer
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,7 +23,8 @@ class QuizAnswer extends React.Component {
 
   handleSubmit(e)
   {
-    this.props.quizCallBack(this.state.question.id, this.state.answer);
+    console.log(this.state.correct_answer);
+    this.props.quizCallBack(this.state.question.id, this.state.answer, this.state.correct_answer);
     e.preventDefault();
   }
   

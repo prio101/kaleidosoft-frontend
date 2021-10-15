@@ -19,11 +19,11 @@ class Question extends React.Component{
             {q.id}. {q.question}
           
           <div className="flex flex-col">
-            {Object.keys(q.options).map(option => {
+            {q.options.map(option => {
               return(
                 <>
                   <div>
-                    {option}: {q.options[option]}
+                    {option.value}
                   </div> 
                 </>
               )
