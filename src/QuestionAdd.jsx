@@ -46,7 +46,7 @@ class QuestionAdd extends React.Component {
         quiz_id: this.state.quiz_id   
       }
     }
-    fetch('https://kaelido-backend.herokuapp.com/api/v1/api/v1/questions', 
+    fetch('https://kaelido-backend.herokuapp.com/api/v1/questions', 
     {
       method: 'POST',
       mode: 'cors',       
