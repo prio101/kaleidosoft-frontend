@@ -20,7 +20,7 @@ class QuestionAdd extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/api/v1/quizes',
+    fetch('https://kaelido-backend.herokuapp.com/api/v1/quizes',
       {
         method: 'GET',
         mode: 'cors',       
@@ -46,7 +46,7 @@ class QuestionAdd extends React.Component {
         quiz_id: this.state.quiz_id   
       }
     }
-    fetch('http://localhost:3000/api/v1/questions', 
+    fetch('https://kaelido-backend.herokuapp.com/api/v1/api/v1/questions', 
     {
       method: 'POST',
       mode: 'cors',       
