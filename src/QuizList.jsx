@@ -39,12 +39,14 @@ class QuizList extends React.Component {
           { this.state.quizes.length !== 0  ? this.state.quizes.map(quiz =>(
             <>
               <div
-                key={quiz.id}
                 className="flex flex-col m-2">
-                <Link 
-                  to={`/quiz/${quiz.id}`}>
-                    {quiz.topic}
-                </Link>
+                  <span key={quiz.id} className="text-xl font-bold text-blue-400">
+                    <Link
+                      to={`/quiz/${quiz.id}`}>
+                        {quiz.topic}
+                    </Link>
+                  </span>
+                
               </div>
             </>
           )): '' }       
