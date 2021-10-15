@@ -71,7 +71,7 @@ class QuizAdd extends React.Component {
             <label>Select Difficulty</label>
             <select className="flex flex-col w-auto p-2 m-2 roudned-md bg-gray-900 text-white" 
                     onChange={this.handleChange} 
-                    name='quiz_id'
+                    name='difficulty'
                     value={ this.state.difficulty } >
               <option value="hard">Hard</option>
               <option value="easy">Easy</option>
