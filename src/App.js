@@ -9,6 +9,8 @@ import {
 import QuizList from './QuizList';
 import Home from './Home';
 import Quiz from './Quiz';
+import QuizAdd from './QuizAdd';
+import QuestionAdd from "./QuestionAdd";
 
 function App() {
   return (
@@ -23,19 +25,33 @@ function App() {
               <li className="m-4">
                 <Link to="/quizes">Quiz Lists</Link>
               </li>
-              
+              <li className="m-4">
+                <Link to="/quizes/new">Add Quiz</Link>
+              </li>
+              <li className="m-4">
+                <Link to="/questions/new">Add Question</Link>
+              </li>
             </ul>
           </nav>
 
           <Switch>
+          <Route exact path="/questions/new">
+              <QuestionAdd />
+            </Route>
+
+            <Route exact path="/quizes/new">
+              <QuizAdd />
+            </Route>
+            
             <Route path="/quizes">
               <QuizList />
             </Route>
+            
             <Route exact path="/quiz/:id" render={(props) => {
               return(<Quiz id={props.match.params.id} />)
             }} >
             </Route>
-            
+
             <Route path="/">
               <Home />
             </Route>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { base_url, api } from './helper';
 class QuizList extends React.Component {
 
   constructor(props){
@@ -13,7 +13,8 @@ class QuizList extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://localhost:3000/api/v1/quizes', 
+    let url = base_url + api + this.state.id
+    fetch('http://localhost:3000/api/v1/quizes',
       {
         method: 'GET',
         mode: 'cors',       

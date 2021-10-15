@@ -1,6 +1,7 @@
 import React from 'react';
 import QuizAnswer from './QuizAnswer';
 import Question from './Question';
+import { base_url, api } from './helper';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -16,6 +17,7 @@ class Quiz extends React.Component {
   }
 
   componentDidMount(){
+    let url = base_url + api + this.state.id;
     fetch(`http://localhost:3000/api/v1/quizes/${this.state.id}`)
     .then(res => res.json())
     .then(res => this.setState({ quiz: res, 
