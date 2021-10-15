@@ -46,7 +46,7 @@ class Quiz extends React.Component {
       feedback: 'Lorem Ipsum',
       quiz_id: this.state.quiz.id
     }
-    fetch('https://kaelido-backend.herokuapp.com/results', 
+    fetch('https://kaelido-backend.herokuapp.com/api/v1/results', 
     {
       method: 'POST',
       mode: 'cors',       
